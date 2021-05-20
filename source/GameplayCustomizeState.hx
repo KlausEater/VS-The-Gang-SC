@@ -19,9 +19,9 @@ import MainVariables._variables;
 
 class GameplayCustomizeState extends MusicBeatState
 {
-    var background:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('stageback','week1'));
-    var curt:FlxSprite = new FlxSprite(-500, -300).loadGraphic(Paths.image('stagecurtains','week1'));
-    var front:FlxSprite = new FlxSprite(-650, 600).loadGraphic(Paths.image('stagefront','week1'));
+    var background:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.image('stageback','shared'));
+    var curt:FlxSprite = new FlxSprite(-500, -300).loadGraphic(Paths.image('stagecurtains','shared'));
+    var front:FlxSprite = new FlxSprite(-650, 600).loadGraphic(Paths.image('stagefront','shared'));
 
     var sick:FlxSprite = new FlxSprite().loadGraphic(Paths.image('sick','shared'));
 
