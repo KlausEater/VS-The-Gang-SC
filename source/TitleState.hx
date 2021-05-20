@@ -371,7 +371,7 @@ class TitleState extends MusicBeatState
 
 		switch (curBeat)
 		{
-			case 4:
+			case 3:
 				createCoolText(['Verwex,   Kadedev', 'Ash237', 'present']);
 			// credTextShit.text += '\npresent...';
 			// credTextShit.addText();
