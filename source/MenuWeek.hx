@@ -28,7 +28,7 @@ class MenuWeek extends MusicBeatState
 
 	var weekData:Array<Dynamic> = [
 		['Tutorial'],
-		['Taggin', 'Bomb', 'Tutorial']
+		['Taggin', 'Bomb', 'Wild']
 	];
 	
 	var curWeekData:Array<Dynamic> = [];
@@ -451,6 +451,7 @@ class MenuWeek extends MusicBeatState
 			txtTracklist.text += "\n" + i;
 		}
 
+		txtTracklist.text += "\n";
 		txtTracklist.text = txtTracklist.text.toUpperCase();
 
 		txtTracklist.screenCenter(X);
