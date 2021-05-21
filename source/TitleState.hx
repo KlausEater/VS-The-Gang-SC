@@ -363,6 +363,7 @@ class TitleState extends MusicBeatState
 		super.beatHit();
 
 		logoBl.animation.play('bump');
+		gfDance.animation.play('bop');
 
 		FlxG.log.add(curBeat);
 
@@ -421,7 +422,6 @@ class TitleState extends MusicBeatState
 			remove(fnfSpr);
 			remove(FNF_Logo);
 			remove(FNF_EX);
-			gfDance.animation.play('bop');
 
 			FlxG.camera.flash(FlxColor.WHITE, 4, null, true);
 			FlxTween.tween(logoBl, {'scale.x': 0.60, 'scale.y': 0.60, x: 60, y: 70}, 1.3, {ease: FlxEase.expoInOut, startDelay: 1.3});
