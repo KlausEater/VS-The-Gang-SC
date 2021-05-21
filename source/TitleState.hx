@@ -146,6 +146,7 @@ class TitleState extends MusicBeatState
 		*/
 		gfDance.antialiasing = true;
 		add(gfDance);
+		gfDance.animation.play('bop');
 
 		var logo:FlxSprite = new FlxSprite().loadGraphic(Paths.image('logo'));
 		logo.screenCenter();
@@ -363,7 +364,6 @@ class TitleState extends MusicBeatState
 		super.beatHit();
 
 		logoBl.animation.play('bump');
-		gfDance.animation.play('bop');
 
 		FlxG.log.add(curBeat);
 
