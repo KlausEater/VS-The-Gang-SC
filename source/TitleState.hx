@@ -139,8 +139,11 @@ class TitleState extends MusicBeatState
 
 		gfDance = new FlxSprite(FlxG.width * 0.35, FlxG.height * 1.2);
 		gfDance.frames = Paths.getSparrowAtlas('gfDanceTitle');
+		gfDance.animation.addByPrefix('bop', 'GF and BF vibin', 24, false);
+		/*
 		gfDance.animation.addByIndices('danceLeft', 'gfDance', [30, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14], "", 24, false);
 		gfDance.animation.addByIndices('danceRight', 'gfDance', [15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29], "", 24, false);
+		*/
 		gfDance.antialiasing = true;
 		add(gfDance);
 
@@ -360,12 +363,6 @@ class TitleState extends MusicBeatState
 		super.beatHit();
 
 		logoBl.animation.play('bump');
-		danceLeft = !danceLeft;
-
-		if (danceLeft)
-			gfDance.animation.play('danceRight');
-		else
-			gfDance.animation.play('danceLeft');
 
 		FlxG.log.add(curBeat);
 
@@ -424,6 +421,7 @@ class TitleState extends MusicBeatState
 			remove(fnfSpr);
 			remove(FNF_Logo);
 			remove(FNF_EX);
+			gfDance.animation.play('bop');
 
 			FlxG.camera.flash(FlxColor.WHITE, 4, null, true);
 			FlxTween.tween(logoBl, {'scale.x': 0.60, 'scale.y': 0.60, x: 60, y: 70}, 1.3, {ease: FlxEase.expoInOut, startDelay: 1.3});

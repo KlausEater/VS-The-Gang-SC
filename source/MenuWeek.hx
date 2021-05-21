@@ -28,20 +28,23 @@ class MenuWeek extends MusicBeatState
 
 	var weekData:Array<Dynamic> = [
 		['Tutorial'],
+		['Taggin', 'Bomb', 'Tutorial']
 	];
 	
 	var curWeekData:Array<Dynamic> = [];
 
 	public static var curDifficulty:Int = 2;
 
-	public static var weekUnlocked:Array<Bool> = [true];
+	public static var weekUnlocked:Array<Bool> = [true, true];
 
 	var weekCharacters:Array<String> = [
-		"gf"
+		"gf",
+		"dad"
 	];
 
 	var weekNames:Array<String> = [
 		"how to funk",
+		"tom"
 	];
 
 	var txtWeekTitle:FlxText;
