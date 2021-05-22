@@ -18,7 +18,9 @@ class FirstTimeState extends MusicBeatState
 	var txt:FlxText = new FlxText(0, 360, FlxG.width,
 		"Hello fellow human friend! THIS IS IMPORTANT PLS READ!\n\n"
 		+ "The menu and the game has flashing stuff, viewer discretion is advised!\n"
-		+ "If you like this mod, cool!",
+		+ "And for your information, this mod was made using the FNF Micd' up mod as an engine!\n"
+		+ "If you like this mod, cool!\n"
+		+ "PRESS ENTER IF YOU ARE DONE READING",
 		32);
 
 	override function create()
