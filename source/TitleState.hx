@@ -186,6 +186,7 @@ class TitleState extends MusicBeatState
 
 		add(logoBl);
 		logoBl.visible = false;
+		logoBl.alpha = 0;
 
 		titleText = new FlxSprite(100, FlxG.height * 0.8);
 		titleText.frames = Paths.getSparrowAtlas('titleEnter');
@@ -380,9 +381,6 @@ class TitleState extends MusicBeatState
 			// credTextShit.text += '\nlmao';
 			case 12:
 				deleteCoolText();
-				logoBl.alpha = 0;
-				logoBl.x = 370;
-				logoBl.y = 150;
 				logoBl.visible = true;
 				new FlxTimer().start(0.5, function(tmr:FlxTimer)
 				{
