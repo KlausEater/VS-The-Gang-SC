@@ -2,7 +2,7 @@
 <project>
 	<!-- _________________________ Application Settings _________________________ -->
 
-	<app title="Friday Night Funkin': Mic'd Up" file="Funkin MU" packageName="com.verwex.funkinMU" package="com.verwex.funkMU" main="Main" version="MU 2.0.2" company="Verwex" />
+	<app title="Friday Night Funkin': Vs The Gang" file="Funkin VS The Gang" packageName="com.clive.funkTG" package="com.clive.funkTG" main="Main" version="TG 0.1.1" company="Clive" />
 
 	<!--Switch Export with Unique ApplicationID and Icon-->
 	<set name="APP_ID" value="0x0100f6c013bbc000" />
