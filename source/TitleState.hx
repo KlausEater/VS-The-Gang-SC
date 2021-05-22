@@ -184,22 +184,6 @@ class TitleState extends MusicBeatState
 		fnfSpr.updateHitbox();
 		fnfSpr.antialiasing = true;
 
-		FNF_Logo = new FlxSprite(0,0).loadGraphic(Paths.image('FNF_Logo'));
-		FNF_EX = new FlxSprite(0,0).loadGraphic(Paths.image('FNF_MU'));
-		add(FNF_EX);
-		add(FNF_Logo);
-		FNF_EX.scale.set(0.6,0.6);
-		FNF_Logo.scale.set(0.6,0.6);
-		FNF_EX.updateHitbox();
-		FNF_Logo.updateHitbox();
-		FNF_EX.antialiasing = true;
-		FNF_Logo.antialiasing = true;
-
-		FNF_EX.x = -1500;
-		FNF_EX.y = 300;
-		FNF_Logo.x = -1500;
-		FNF_Logo.y = 300;
-
 		add(logoBl);
 		logoBl.visible = false;
 
@@ -375,7 +359,7 @@ class TitleState extends MusicBeatState
 			// credTextShit.addText();
 			case 6:
 				deleteCoolText();
-				createCoolText(['A modification', 'for']);
+				createCoolText(['A mod', 'for']);
 			case 7:
 				fnfSpr.x = -1500;
 				fnfSpr.visible = true;
@@ -420,8 +404,6 @@ class TitleState extends MusicBeatState
 		if (!skippedIntro)
 		{
 			remove(fnfSpr);
-			remove(FNF_Logo);
-			remove(FNF_EX);
 
 			FlxG.camera.flash(FlxColor.WHITE, 4, null, true);
 			FlxTween.tween(logoBl, {'scale.x': 0.60, 'scale.y': 0.60, x: 60, y: 70}, 1.3, {ease: FlxEase.expoInOut, startDelay: 1.3});
