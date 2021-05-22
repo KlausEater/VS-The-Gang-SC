@@ -124,7 +124,7 @@ class Character extends FlxSprite
 				var tex = Paths.getSparrowAtlas('characters/BF_assets_Guitar','shared');
 				frames = tex;
 				animation.addByPrefix('idle', 'BF holding the guitar', 24, false);
-				animation.addByPrefix('singUP', 'BF NOTE UP0', 24, false);
+				animation.addByPrefix('singUP', 'BF NOTE UP', 24, false);
 				animation.addByPrefix('singLEFT', 'BF NOTE LEFT', 24, false);
 				animation.addByPrefix('singRIGHT', 'BF NOTE RIGHT', 24, false);
 				animation.addByPrefix('singDOWN', 'BF NOTE DOWN', 24, false);
