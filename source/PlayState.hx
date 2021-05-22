@@ -3429,6 +3429,13 @@ private function keyShit():Void
 			dad.playAnim('cheer', true);
 		}
 
+		if(curStep == 1456 && SONG.song == 'Wild')
+		{
+			remove(boyfriend);
+			boyfriend = new Boyfriend(753.25, 328.05, 'bf-guitar');
+			add(boyfriend);
+		}
+
 		switch (curStage)
 		{
 			case 'school':
