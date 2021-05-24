@@ -141,6 +141,7 @@ class PlayState extends MusicBeatState
 
 	var bgGirls:BackgroundGirls;
 	var wiggleShit:WiggleEffect = new WiggleEffect();
+	
 
 	private var LightsOutBG:FlxSprite;
 	private var BlindingBG:FlxSprite;
@@ -375,6 +376,15 @@ class PlayState extends MusicBeatState
 			bg.scrollFactor.set(0.9, 0.9);
 			bg.active = false;
 			add(bg);
+
+			bfGuitarTrans = new FlxSprite(753.25, 328.05);
+			bfGuitarTrans.frames = Paths.getSparrowAtlas('BF_extra_assets_Guitar', 'week1');
+			bfGuitarTrans.animation.addByPrefix('get guitar', 'BF releasing the guitar', 24, false);
+			bfGuitarTrans.animation.addByPrefix('get mic', 'BF releasin the mic again', 24, false);
+			bfGuitarTrans.setGraphicSize();
+			bfGuitarTrans.scrollFactor.set();
+			bfGuitarTrans.updateHitbox();
+			bfGuitarTrans.active = false;
 		}
 		default:
 		{
@@ -3429,11 +3439,41 @@ private function keyShit():Void
 			dad.playAnim('cheer', true);
 		}
 
-		if(curStep == 1450 && SONG.song == 'Wild')
+		if(curStep == 1440 && SONG.song == 'Wild')
 		{
+			trace("INITIATING GUITAR");
+			
+			//magik
+			boyfriend.visible = false;
+
+			bfGuitarTrans.x += -50;
+			bfGuitarTrans.y += 100;
+			
+			//transition bf
+			add(bfGuitarTrans);
+			bfGuitarTrans.visible = true;
+			bfGuitarTrans.animation.play('get guitar');
+		}
+
+		if(curStep == 1456 && SONG.song == 'Wild')
+		{
+			//performance ¯\_(ツ)_/¯
+			bfGuitarTrans.visible = false;
+
+			//remove ze boyfriends
+			remove(bfGuitarTrans);
+
+			//remove
 			remove(boyfriend);
+
+			//make a new boifren
 			boyfriend = new Boyfriend(753.25, 328.05, 'bf-guitar');
+				
+			//add bf (DUh)
 			add(boyfriend);
+
+			//reverse magik
+			boyfriend.visible = true; 
 		}
 
 		switch (curStage)
