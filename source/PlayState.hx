@@ -142,6 +142,7 @@ class PlayState extends MusicBeatState
 	var bgGirls:BackgroundGirls;
 	var wiggleShit:WiggleEffect = new WiggleEffect();
 	
+	var bfGuitarTrans:FlxSprite;
 
 	private var LightsOutBG:FlxSprite;
 	private var BlindingBG:FlxSprite;
