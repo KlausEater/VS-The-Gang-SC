@@ -3472,27 +3472,24 @@ class PlayState extends MusicBeatState
 		{
 			trace("INITIATING GUITAR");
 
-			new FlxTimer().start(1.0, function(tmr:FlxTimer)
+			new FlxTimer().start(0.5, function(tmr:FlxTimer)
 			{
 				// magik
 				boyfriend.visible = false;
 
-				bfGuitarTrans.x += -50;
-				bfGuitarTrans.y += 100;
+				// remove
+				remove(boyfriend);
+
+				bfGuitarTrans.x += -400;
+				bfGuitarTrans.y += -350;
 
 				// transition bf
 				bfGuitarTrans.visible = true;
 				bfGuitarTrans.animation.play('get guitar');
 
-				new FlxTimer().start(0.5, function(tmr:FlxTimer){
+				new FlxTimer().start(1.0, function(tmr:FlxTimer){
 					// performance ¯\_(ツ)_/¯
 					bfGuitarTrans.visible = false;
-
-					// remove ze boyfriends
-					remove(bfGuitarTrans);
-
-					// remove
-					remove(boyfriend);
 
 					// make a new boifren
 					boyfriend = new Boyfriend(753.25, 328.05, 'bf-guitar');
