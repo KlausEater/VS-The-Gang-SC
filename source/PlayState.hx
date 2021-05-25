@@ -3483,28 +3483,27 @@ class PlayState extends MusicBeatState
 				// transition bf
 				bfGuitarTrans.visible = true;
 				bfGuitarTrans.animation.play('get guitar');
+
+				new FlxTimer().start(0.5, function(tmr:FlxTimer){
+					// performance ¯\_(ツ)_/¯
+					bfGuitarTrans.visible = false;
+
+					// remove ze boyfriends
+					remove(bfGuitarTrans);
+
+					// remove
+					remove(boyfriend);
+
+					// make a new boifren
+					boyfriend = new Boyfriend(753.25, 328.05, 'bf-guitar');
+
+					// add bf (DUh)
+					add(boyfriend);
+
+					// reverse magik
+					boyfriend.visible = true;
+				});
 			});
-		}
-
-		if (curStep == 1456 && SONG.song == 'Wild')
-		{
-			// performance ¯\_(ツ)_/¯
-			bfGuitarTrans.visible = false;
-
-			// remove ze boyfriends
-			remove(bfGuitarTrans);
-
-			// remove
-			remove(boyfriend);
-
-			// make a new boifren
-			boyfriend = new Boyfriend(753.25, 328.05, 'bf-guitar');
-
-			// add bf (DUh)
-			add(boyfriend);
-
-			// reverse magik
-			boyfriend.visible = true;
 		}
 
 		switch (curStage)
