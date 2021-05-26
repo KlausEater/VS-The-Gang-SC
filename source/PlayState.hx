@@ -384,6 +384,21 @@ class PlayState extends MusicBeatState
 					bg.scrollFactor.set(0.9, 0.9);
 					bg.active = false;
 					add(bg);
+				}
+			case 'wild':
+				{
+					defaultCamZoom = 0.9;
+					curStage = 'tomStreet';
+
+					var posX = -359.8;
+					var posY = -281.8;
+
+					var bg:FlxSprite = new FlxSprite(posX, posY);
+					bg.loadGraphic(Paths.image('tom_street', 'week1'));
+					bg.antialiasing = true;
+					bg.scrollFactor.set(0.9, 0.9);
+					bg.active = false;
+					add(bg);
 
 					bfGuitarTrans = new FlxSprite(753.25, 328.05);
 					bfGuitarTrans.frames = Paths.getSparrowAtlas('BF_extra_assets_Guitar', 'week1');
@@ -3480,8 +3495,8 @@ class PlayState extends MusicBeatState
 				// remove
 				remove(boyfriend);
 
-				bfGuitarTrans.x += -400;
-				bfGuitarTrans.y += -350;
+				bfGuitarTrans.x += -250;
+				bfGuitarTrans.y += -270;
 
 				// transition bf
 				bfGuitarTrans.visible = true;

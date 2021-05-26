@@ -403,6 +403,8 @@ class TitleState extends MusicBeatState
 		{
 			remove(fnfSpr);
 
+			logoBl.alpha = 1;
+
 			FlxG.camera.flash(FlxColor.WHITE, 4, null, true);
 			FlxTween.tween(logoBl, {'scale.x': 0.60, 'scale.y': 0.60, x: 60, y: 70}, 1.3, {ease: FlxEase.expoInOut, startDelay: 1.3});
 			FlxTween.tween(gfDance, {y: 20}, 2.3, {ease: FlxEase.expoInOut, startDelay: 0.8});
