@@ -370,7 +370,7 @@ class PlayState extends MusicBeatState
 
 		switch (SONG.song.toLowerCase())
 		{
-			case 'taggin' | 'bomb' | 'wild':
+			case 'taggin' | 'bomb':
 				{
 					defaultCamZoom = 0.9;
 					curStage = 'tomStreet';
