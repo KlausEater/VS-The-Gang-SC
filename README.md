@@ -12,3 +12,8 @@ The repository of the Friday night funkin vs The Gang [MOD]
 ![Delga](https://cdn.discordapp.com/avatars/238718577824366592/d8a9be0a6645ff357aacddeaa37af6f8.png?size=128)
 ### Clive dev(me lel) - programmer
 ![Clive dev](https://cdn.discordapp.com/avatars/678174911818235906/ab2d9ff8a48be965eb20de7295ca2d2f.png?size=128)
+
+	| Syntax | Description |
+| ----------- | ----------- |
+| Header | Title |
+| Paragraph | Text |
