@@ -11,6 +11,7 @@ import flixel.math.FlxPoint;
 import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
 import MainVariables._variables;
+import Song.SwagSong;
 
 class GameOverSubstate extends MusicBeatSubstate
 {
@@ -21,6 +22,8 @@ class GameOverSubstate extends MusicBeatSubstate
 	var zoomLerp:Float = 0.09;
 
 	var stageSuffix:String = "";
+
+	public static var SONG:SwagSong;
 
 	public function new(x:Float, y:Float)
 	{
@@ -35,7 +38,7 @@ class GameOverSubstate extends MusicBeatSubstate
 				stageSuffix = '-pixel';
 				daBf = 'bf-pixel-dead';
 			default:
-				daBf = 'bf';
+				daBf = SONG.player1;
 		}
 
 		PlayState.ended = false;
