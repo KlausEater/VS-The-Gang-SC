@@ -3471,10 +3471,13 @@ class PlayState extends MusicBeatState
 			boyfriend.playAnim('idle');
 		}
 
+
+		/*
 		if (curBeat % 8 == 7 && curSong == 'Bopeebo')
 		{
 			boyfriend.playAnim('hey', true);
 		}
+		*/
 
 		if (curBeat % 16 == 15 && SONG.song == 'Tutorial' && dad.curCharacter == 'gf' && curBeat > 16 && curBeat < 48)
 		{
@@ -3502,8 +3505,8 @@ class PlayState extends MusicBeatState
 				bfGuitarTrans.visible = true;
 				bfGuitarTrans.animation.play('get guitar');
 
-				new FlxTimer().start(1.0, function(tmr:FlxTimer){
-					// performance ¯\_(ツ)_/¯
+				new FlxTimer().start(0.2, function(tmr:FlxTimer){
+					// magic ze trans anim
 					bfGuitarTrans.visible = false;
 
 					// make a new boifren
@@ -3514,6 +3517,45 @@ class PlayState extends MusicBeatState
 
 					// reverse magik
 					boyfriend.visible = true;
+				});
+			});
+		}
+
+		if (curStep == 1705 && SONG.song == 'Wild')
+		{
+			new FlxTimer().start(1.0, function(tmr:FlxTimer){
+
+				//magik again
+				boyfriend.visible = false;
+
+				// remove again
+				remove(boyfriend);
+
+				bfGuitarTrans.x += -250;
+				bfGuitarTrans.y += -270;
+
+				//make transition animation visible again
+				bfGuitarTrans.visible = true;
+
+				//play animation
+				bfGuitarTrans.animation.play('get mic');
+
+				new FlxTimer().start(2.3, function(tmr:FlxTimer){
+
+					bfGuitarTrans.visible = false;
+	
+					// officially remove
+					remove(bfGuitarTrans);
+	
+					// boifren bak to norm
+					boyfriend = new Boyfriend(753.25, 328.05, 'bf');
+	
+					// add bf again
+					add(boyfriend);
+	
+					// reverse magik
+					boyfriend.visible = true;
+
 				});
 			});
 		}
