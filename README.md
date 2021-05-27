@@ -1,5 +1,5 @@
 <p align="center">
-	<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"><img src="/art/logo.png" alt="fnf vs the gang logo" width="658.5px" height="487.5px"></a>
+	<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"><img src="/art/logo.png" alt="fnf vs the gang logo" width="428px" height="286px"></a>
 </p>
 # VS The Gang source code
 The repository of the Friday night funkin vs The Gang [MOD]
