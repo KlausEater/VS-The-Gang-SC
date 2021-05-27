@@ -408,7 +408,6 @@ class PlayState extends MusicBeatState
 					bfGuitarTrans.scrollFactor.set();
 					bfGuitarTrans.updateHitbox();
 					bfGuitarTrans.visible = false;
-					add(bfGuitarTrans);
 				}
 			default:
 				{
@@ -3499,6 +3498,7 @@ class PlayState extends MusicBeatState
 				bfGuitarTrans.y += -270;
 
 				// transition bf
+				add(bfGuitarTrans);
 				bfGuitarTrans.visible = true;
 				bfGuitarTrans.animation.play('get guitar');
 
