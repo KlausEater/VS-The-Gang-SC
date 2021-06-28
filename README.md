@@ -9,7 +9,7 @@ The repository of the Friday night funkin vs The Gang [MOD]
 
 # Credits
 ### Darami - artist & mod creator:
-<img src="/art/darami.gif" alt="darami" width="128px" height="128px"></a>
+<img src="/art/darami.png" alt="darami" width="128px" height="128px"></a>
 
 ### HenryElVergas(fani name) - animator, musician:
 <img src="/art/henry.jpg" alt="henry el vergas" width="128px" height="128px"></a>
