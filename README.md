@@ -11,6 +11,6 @@ The repository of the Friday night funkin vs The Gang [MOD]
 ### Darami - artist & mod creator:
 ![darami](art/darami.gif)
 ### HenryElVergas(fani name) - animator, musician:
-![henry el vergas](art/henry.png)
+![henry el vergas](art/henry.jpg)
 ### Clive dev(me lol) - programmer and charter:
 ![clive](art/clive.png)
