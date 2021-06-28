@@ -8,6 +8,9 @@ The repository of the Friday night funkin vs The Gang [MOD]
 **This mod uses FNF Micd Up as the engine, [check it out!](https://github.com/Verwex/Funkin-Mic-d-Up-SC)**
 
 # Credits
-### Darami - artist & mod creator
-### HenryElVergas(fani name) - animator,musician and charter
-### Clive dev(me lel) - programmer and co charter
+### Darami - artist & mod creator:
+![darami](art/darami.gif)
+### HenryElVergas(fani name) - animator,musician and charter:
+![henry el vergas](art/henry el vergas.png)
+### Clive dev(me lel) - programmer and co charter:
+![clive](art/clive.png)
