@@ -3487,7 +3487,7 @@ class PlayState extends MusicBeatState
 
 		if (curStep == 1440 && SONG.song == 'Wild')
 		{
-			trace("INITIATING GUITAR");
+			trace("bringing out the guitar");
 
 			new FlxTimer().start(0.5, function(tmr:FlxTimer)
 			{
@@ -3522,6 +3522,8 @@ class PlayState extends MusicBeatState
 		}
 		else if (curStep == 1705 && SONG.song == 'Wild')
 		{
+			trace("bringing out the mic");
+
 			new FlxTimer().start(1.0, function(tmr:FlxTimer){
 
 				//magik again
@@ -3529,9 +3531,6 @@ class PlayState extends MusicBeatState
 
 				// remove again
 				remove(boyfriend);
-
-				bfGuitarTrans.x += -250;
-				bfGuitarTrans.y += -270;
 
 				//make transition animation visible again
 				bfGuitarTrans.visible = true;
