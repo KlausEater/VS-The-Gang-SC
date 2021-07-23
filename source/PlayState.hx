@@ -3520,8 +3520,7 @@ class PlayState extends MusicBeatState
 				});
 			});
 		}
-
-		if (curStep == 1705 && SONG.song == 'Wild')
+		else if (curStep == 1705 && SONG.song == 'Wild')
 		{
 			new FlxTimer().start(1.0, function(tmr:FlxTimer){
 
