@@ -412,6 +412,8 @@ class TitleState extends MusicBeatState
 			titleText.visible = true;
 			logoBl.visible = true;
 			skippedIntro = true;
+
+			FlxG.switchState(new VideoState('assets/videos/TomSans_cutscene_.webm', new PlayState()));
 		}
 	}
 }

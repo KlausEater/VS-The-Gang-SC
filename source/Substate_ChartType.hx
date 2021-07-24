@@ -172,7 +172,7 @@ class Substate_ChartType extends MusicBeatSubstate
 
                     if(curWeek == 0)
                     {
-                        FlxG.switchState(new VideoState('assets/videos/TomSans_cutscene_', new PlayState()));
+                        FlxG.switchState(new VideoState('assets/videos/TomSans_cutscene_.webm', new PlayState()));
                     }
                     else
                     {
