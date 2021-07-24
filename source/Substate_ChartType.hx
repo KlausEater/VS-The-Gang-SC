@@ -45,8 +45,6 @@ class Substate_ChartType extends MusicBeatSubstate
     {
         super();
 
-        curWeek = _curWeek;
-
         add(blackBarThingie);
         blackBarThingie.scrollFactor.set();
 
@@ -88,6 +86,10 @@ class Substate_ChartType extends MusicBeatSubstate
 
         camFollow = new FlxObject(0, 0, 1, 1);
 		add(camFollow);
+
+        curWeek = _curWeek;
+
+        trace(curWeek);
 
         new FlxTimer().start(0.1, function(tmr:FlxTimer)
 			{
