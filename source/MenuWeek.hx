@@ -465,7 +465,7 @@ class MenuWeek extends MusicBeatState
 			case 'gf':
 				characterUI.offset.set(0, 0);
 			case 'tom':
-				characterUI.offset.set(0, 0);
+				characterUI.offset.set(-100, -100);
 		}
 
 		#if !switch
