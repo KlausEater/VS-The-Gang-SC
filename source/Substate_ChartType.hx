@@ -41,9 +41,11 @@ class Substate_ChartType extends MusicBeatSubstate
 
     var curWeek:Int = 0;
 
-    public function new(curWeek:Int)
+    public function new(_curWeek:Int)
     {
         super();
+
+        curWeek = _curWeek;
 
         add(blackBarThingie);
         blackBarThingie.scrollFactor.set();
@@ -167,7 +169,15 @@ class Substate_ChartType extends MusicBeatSubstate
 				{
                     FlxG.sound.music.stop();
 					boombox.visible = false;
-					LoadingState.loadAndSwitchState(new PlayState(), true);
+
+                    if(curWeek == 0)
+                    {
+                        FlxG.switchState(new VideoState('assets/videos/TomSans_cutscene_.webm', new PlayState()));
+                    }
+                    else
+                    {
+                        LoadingState.loadAndSwitchState(new PlayState(), true);
+                    }
 				});
             }
         }
