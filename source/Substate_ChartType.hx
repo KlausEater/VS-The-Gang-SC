@@ -41,7 +41,7 @@ class Substate_ChartType extends MusicBeatSubstate
 
     var curWeek:Int = 0;
 
-    public function new(_curWeek:Int)
+    public function new(_curWeek:Int = 0)
     {
         super();
 
