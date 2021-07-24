@@ -351,7 +351,7 @@ class MenuWeek extends MusicBeatState
 
 			new FlxTimer().start(0.9, function(tmr:FlxTimer)
 				{
-					FlxG.state.openSubState(new Substate_ChartType());
+					FlxG.state.openSubState(new Substate_ChartType(curWeek));
 				});
 		}
 	}

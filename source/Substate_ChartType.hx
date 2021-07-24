@@ -39,7 +39,9 @@ class Substate_ChartType extends MusicBeatSubstate
 
     var blackBarThingie:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
 
-    public function new()
+    var curWeek:Int = 0;
+
+    public function new(curWeek:Int)
     {
         super();
 
