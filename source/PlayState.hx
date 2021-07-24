@@ -3485,77 +3485,83 @@ class PlayState extends MusicBeatState
 			dad.playAnim('cheer', true);
 		}
 
-		if (curStep == 1440 && SONG.song == 'Wild')
+		if (SONG.song == 'Wild')
 		{
-			trace("bringing out the guitar");
-
-			new FlxTimer().start(0.5, function(tmr:FlxTimer)
+			if(curStep == 1440)
 			{
-				// magik
-				boyfriend.visible = false;
+				trace("bringing out the guitar");
 
-				// remove
-				remove(boyfriend);
+				new FlxTimer().start(0.5, function(tmr:FlxTimer)
+				{
+					// magik
+					boyfriend.visible = false;
 
-				bfGuitarTrans.x += -250;
-				bfGuitarTrans.y += -270;
+					// remove
+					remove(boyfriend);
 
-				// transition bf
-				add(bfGuitarTrans);
-				bfGuitarTrans.visible = true;
-				bfGuitarTrans.animation.play('get guitar');
+					bfGuitarTrans.x += -250;
+					bfGuitarTrans.y += -270;
 
-				new FlxTimer().start(0.2, function(tmr:FlxTimer){
-					// magic ze trans anim
-					bfGuitarTrans.visible = false;
+					// transition bf
+					add(bfGuitarTrans);
+					bfGuitarTrans.visible = true;
+					bfGuitarTrans.animation.play('get guitar');
 
-					// make a new boifren
-					boyfriend = new Boyfriend(753.25, 328.05, 'bf-guitar');
+					new FlxTimer().start(0.2, function(tmr:FlxTimer){
+						// magic ze trans anim
+						bfGuitarTrans.visible = false;
 
-					// add bf (DUh)
-					add(boyfriend);
+						// make a new boifren
+						boyfriend = new Boyfriend(753.25, 328.05, 'bf-guitar');
 
-					// reverse magik
-					boyfriend.visible = true;
+						// add bf (DUh)
+						add(boyfriend);
+
+						// reverse magik
+						boyfriend.visible = true;
+					});
 				});
-			});
-		}
-		else if (curStep == 1705 && SONG.song == 'Wild')
-		{
-			trace("bringing out the mic");
+			}
+			
+			if(curStep == 1705)
+			{
+				trace("bringing out the mic");
 
-			new FlxTimer().start(1.0, function(tmr:FlxTimer){
-
-				//magik again
-				boyfriend.visible = false;
-
-				// remove again
-				remove(boyfriend);
-
-				//make transition animation visible again
-				bfGuitarTrans.visible = true;
-
-				//play animation
-				bfGuitarTrans.animation.play('get mic');
-
-				new FlxTimer().start(2.3, function(tmr:FlxTimer){
-
-					bfGuitarTrans.visible = false;
+				new FlxTimer().start(1.0, function(tmr:FlxTimer){
 	
-					// officially remove
-					remove(bfGuitarTrans);
+					//magik again
+					boyfriend.visible = false;
 	
-					// boifren bak to norm
-					boyfriend = new Boyfriend(753.25, 328.05, 'bf');
+					// remove again
+					remove(boyfriend);
 	
-					// add bf again
-					add(boyfriend);
+					//make transition animation visible again
+					bfGuitarTrans.visible = true;
 	
-					// reverse magik
-					boyfriend.visible = true;
-
+					//play animation
+					bfGuitarTrans.animation.play('get mic');
+	
+					new FlxTimer().start(2.3, function(tmr:FlxTimer){
+	
+						bfGuitarTrans.visible = false;
+		
+						// officially remove
+						remove(bfGuitarTrans);
+		
+						// boifren bak to norm
+						boyfriend = new Boyfriend(753.25, 328.05, 'bf');
+		
+						// add bf again
+						add(boyfriend);
+		
+						// reverse magik
+						boyfriend.visible = true;
+	
+					});
 				});
-			});
+			}
+
+			
 		}
 
 		switch (curStage)

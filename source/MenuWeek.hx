@@ -27,7 +27,6 @@ class MenuWeek extends MusicBeatState
 	var scoreText:FlxText;
 
 	var weekData:Array<Dynamic> = [
-		['Tutorial'],
 		['Taggin', 'Bomb', 'Wild']
 	];
 	
@@ -38,12 +37,10 @@ class MenuWeek extends MusicBeatState
 	public static var weekUnlocked:Array<Bool> = [true, true];
 
 	var weekCharacters:Array<String> = [
-		"gf",
-		"dad"
+		"tom"
 	];
 
 	var weekNames:Array<String> = [
-		"how to funk",
 		"tom"
 	];
 
@@ -466,6 +463,8 @@ class MenuWeek extends MusicBeatState
 		switch (characterUI.animation.curAnim.name)
 		{
 			case 'gf':
+				characterUI.offset.set(0, 0);
+			case 'tom':
 				characterUI.offset.set(0, 0);
 		}
 
