@@ -355,7 +355,7 @@ class TitleState extends MusicBeatState
 		switch (curBeat)
 		{
 			case 3:
-				createCoolText(['Darami',  'HenryElVergas', 'Clive dev', 'present']);
+				createCoolText(['Darami',  'HenryElVergas', 'Clive dev', 'Julio', 'PrffsrBONNIE', 'present']);
 			// credTextShit.text += '\npresent...';
 			// credTextShit.addText();
 			case 6:
@@ -412,8 +412,6 @@ class TitleState extends MusicBeatState
 			titleText.visible = true;
 			logoBl.visible = true;
 			skippedIntro = true;
-
-			FlxG.switchState(new VideoState('assets/videos/tom/TomSans_cutscene_.webm', new PlayState()));
 		}
 	}
 }
