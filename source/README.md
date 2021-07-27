@@ -2,7 +2,7 @@
 
 **Most of these instructions were gotten from the kade engine compiling guide lol** (it will still work)
 
-## NOTE
+### NOTE
 
 1. You need to be using the os that you want the build to be for.
     - Use a linux to build for linux 
