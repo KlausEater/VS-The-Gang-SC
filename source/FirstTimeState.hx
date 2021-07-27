@@ -16,10 +16,10 @@ class FirstTimeState extends MusicBeatState
 
 	var sinMod:Float = 0;
 	var txt:FlxText = new FlxText(0, 360, FlxG.width,
-		"Hello fellow human friend! THIS IS IMPORTANT PLS READ!\n\n"
-		+ "The menu and the game has flashing stuff, viewer discretion is advised!\n"
-		+ "And for your information, this mod was made using the FNF Micd' up mod as an engine!\n"
-		+ "If you like this mod, cool!\n"
+		"THIS IS IMPORTANT PLS READ!\n\n"
+		+ "WARNING: This mod may potentially trigger seizures for people with photosensitive epilepsy. Viewer discretion is advised.\n"
+		+ "Special thanks to Verwex for making fnf mic'd up\n"
+		+ "If you like this mod, cool\n"
 		+ "PRESS ENTER IF YOU ARE DONE READING",
 		32);
 
