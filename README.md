@@ -7,6 +7,8 @@ The repository of the Friday night funkin vs The Gang [MOD]
 
 **This mod uses FNF Micd Up as the engine, [check it out!](https://github.com/Verwex/Funkin-Mic-d-Up-SC)**
 
+## if you want to compile this, check the source folder and scroll down for building instructions
+
 # Credits
 ### Darami - artist(icons, concecepts) & mod creator/founder:
 <img src="/art/darami.png" alt="darami" width="128px" height="128px"></a>
@@ -19,5 +21,3 @@ The repository of the Friday night funkin vs The Gang [MOD]
 
 ### Julio - background artist:
 <img src="/art/julio.png" alt="julio" width="128px" height="128px"></a>
-
-**if you want to compile the source code, check the source folder for building instructions**
