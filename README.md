@@ -22,15 +22,15 @@ The repository of the Friday night funkin vs The Gang [MOD]
 
 # Compiling
 
-**Most of these instructions were gotten from the kade engine compiling guide lol**(it will still work though)
+**Most of these instructions were gotten from the kade engine compiling guide lol**(it will still work)
 
 1. [Install Haxe 4.1.5](https://haxe.org/download/version/4.1.5/). The newest version of haxe doesnt really work with Friday Night Funkin.
 
 2. After installing Haxe, [Install HaxeFlixel](https://haxeflixel.com/documentation/install-haxeflixel/).
 
 3. Install `git`.
-		- Windows and Mac: install from the [git-scm](https://git-scm.com/downloads) website.
-		- Linux: install the `git` package: `sudo apt install git` (ubuntu), `sudo pacman -S git` (arch), etc... (you probably already have it)
+	- Windows and Mac: install from the [git-scm](https://git-scm.com/downloads) website.	
+	- Linux: install the `git` package: `sudo apt install git` (ubuntu), `sudo pacman -S git` (arch), etc... (you probably already have it)
 
 4. Install and set up the necessary libraries:
 	 - `haxelib install lime 7.9.0`
