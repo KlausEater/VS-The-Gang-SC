@@ -2,12 +2,14 @@
 
 **Most of these instructions were gotten from the kade engine compiling guide lol** (it will still work)
 
-# NOTE
+## NOTE
 
 1. You need to be using the os that you want the build to be for.
     - Use a linux to build for linux 
     - Use a windows to build for windows 
     - Use a mac to build for mac 
+
+# Dependencies
 
 1. [Install Haxe 4.1.5](https://haxe.org/download/version/4.1.5/). The newest version of haxe doesnt really work with Friday Night Funkin.
 
