@@ -13,10 +13,14 @@ class Character extends FlxSprite
 	public var animOffsets:Map<String, Array<Dynamic>>;
 	public var debugMode:Bool = false;
 
+	public var altAnim = "";
+
 	public var isPlayer:Bool = false;
 	public var curCharacter:String = 'bf';
 
 	public var holdTimer:Float = 0;
+
+
 
 	public function new(x:Float, y:Float, ?character:String = "bf", ?isPlayer:Bool = false)
 	{
@@ -121,9 +125,9 @@ class Character extends FlxSprite
 				flipX = true;
 
 			case 'bf-guitar':
-				var tex = Paths.getSparrowAtlas('characters/BF_assets_Guitar','shared');
+				var tex = Paths.getSparrowAtlas('characters/bfGuitar','shared');
 				frames = tex;
-				animation.addByPrefix('idle', 'BF holding the guitar', 24, false);
+				animation.addByPrefix('idle', 'BF idle dance', 24, false);
 				animation.addByPrefix('singUP', 'BF NOTE UP0', 24, false);
 				animation.addByPrefix('singLEFT', 'BF NOTE LEFT0', 24, false);
 				animation.addByPrefix('singRIGHT', 'BF NOTE RIGHT0', 24, false);
@@ -132,6 +136,17 @@ class Character extends FlxSprite
 				animation.addByPrefix('singLEFTmiss', 'BF NOTE LEFT MISS', 24, false);
 				animation.addByPrefix('singRIGHTmiss', 'BF NOTE RIGHT MISS', 24, false);
 				animation.addByPrefix('singDOWNmiss', 'BF NOTE DOWN MISS', 24, false);
+				animation.addByPrefix('hey', 'BF HEY', 24, false);
+
+				animation.addByPrefix('idle-alt', 'BF Guitar idle dance', 24, false);
+				animation.addByPrefix('singUP-alt', 'BF Guitar NOTE SING UP0', 24, false);
+				animation.addByPrefix('singLEFT-alt', 'BF Guitar NOTE SING LEFT0', 24, false);
+				animation.addByPrefix('singRIGHT-alt', 'BF Guitar NOTE SING RIGHT0', 24, false);
+				animation.addByPrefix('singDOWN-alt', 'BF Guitar NOTE SING DOWN0', 24, false);
+				animation.addByPrefix('singUPmiss-alt', 'BF Guitar NOTE SING UP MISS', 24, false);
+				animation.addByPrefix('singLEFTmiss-alt', 'BF Guitar NOTE SING LEFT MISS', 24, false);
+				animation.addByPrefix('singRIGHTmiss-alt', 'BF Guitar NOTE SING RIGHT MISS', 24, false);
+				animation.addByPrefix('singDOWNmiss-alt', 'BF Guitar NOTE SING DOWN MISS', 24, false);
 
 				animation.addByPrefix('firstDeath', "BF dies", 24, false);
 				animation.addByPrefix('deathLoop', "BF Dead Loop", 24, true);
@@ -146,6 +161,17 @@ class Character extends FlxSprite
 				addOffset("singRIGHTmiss", -30, 21);
 				addOffset("singLEFTmiss", 12, 24);
 				addOffset("singDOWNmiss", -11, -19);
+
+				addOffset('idle-alt', -5);
+				addOffset("singUP-alt", -29, 27);
+				addOffset("singRIGHT-alt", -38, -7);
+				addOffset("singLEFT-alt", 12, -6);
+				addOffset("singDOWN-alt", -10, -50);
+				addOffset("singUPmiss-alt", -29, 27);
+				addOffset("singRIGHTmiss-alt", -30, 21);
+				addOffset("singLEFTmiss-alt", 12, 24);
+				addOffset("singDOWNmiss-alt", -11, -19);
+				
 				addOffset('firstDeath', 37, 11);
 				addOffset('deathLoop', 37, 5);
 				addOffset('deathConfirm', 37, 69);

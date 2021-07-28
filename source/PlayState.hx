@@ -960,7 +960,7 @@ class PlayState extends MusicBeatState
 			gf.dance();
 			if (!frozen)
 			{
-				boyfriend.playAnim('idle');
+				boyfriend.playAnim('idle' + boyfriend.altAnim);
 				if (_modifiers.FrightSwitch)
 				{
 					if (_modifiers.Fright >= 50 && _modifiers.Fright < 100)
@@ -2226,13 +2226,13 @@ class PlayState extends MusicBeatState
 							switch (daNote.noteData)
 							{
 								case 0:
-									boyfriend.playAnim('singLEFTmiss', true);
+									boyfriend.playAnim('singLEFTmiss' + boyfriend.altAnim, true);
 								case 1:
-									boyfriend.playAnim('singDOWNmiss', true);
+									boyfriend.playAnim('singDOWNmiss' + boyfriend.altAnim, true);
 								case 2:
-									boyfriend.playAnim('singUPmiss', true);
+									boyfriend.playAnim('singUPmiss' + boyfriend.altAnim, true);
 								case 3:
-									boyfriend.playAnim('singRIGHTmiss', true);
+									boyfriend.playAnim('singRIGHTmiss' + boyfriend.altAnim, true);
 							}
 							if (_variables.muteMiss)
 								vocals.volume = 0;
@@ -3020,7 +3020,7 @@ class PlayState extends MusicBeatState
 			{
 				if (!frozen)
 				{
-					boyfriend.playAnim('idle');
+					boyfriend.playAnim('idle' + boyfriend.altAnim);
 					if (_modifiers.FrightSwitch)
 					{
 						if (_modifiers.Fright >= 50 && _modifiers.Fright < 100)
@@ -3263,13 +3263,13 @@ class PlayState extends MusicBeatState
 			switch (note.noteData)
 			{
 				case 0:
-					boyfriend.playAnim('singLEFT', true);
+					boyfriend.playAnim('singLEFT' + boyfriend.altAnim, true);
 				case 1:
-					boyfriend.playAnim('singDOWN', true);
+					boyfriend.playAnim('singDOWN' + boyfriend.altAnim, true);
 				case 2:
-					boyfriend.playAnim('singUP', true);
+					boyfriend.playAnim('singUP' + boyfriend.altAnim, true);
 				case 3:
-					boyfriend.playAnim('singRIGHT', true);
+					boyfriend.playAnim('singRIGHT' + boyfriend.altAnim, true);
 			}
 
 			playerStrums.forEach(function(spr:FlxSprite)
@@ -3393,6 +3393,19 @@ class PlayState extends MusicBeatState
 			resyncVocals();
 		}
 
+		if (SONG.song == 'Wild')
+		{
+			switch(curStep)
+			{
+				case 1456:
+					boyfriend.altAnim = "-alt";
+					break;
+				case 1744:
+					boyfriend.altAnim = "";
+					break;
+			}
+		}
+
 		if (dad.curCharacter == 'spooky' && curStep % 4 == 2)
 		{
 			// dad.dance();
@@ -3468,7 +3481,7 @@ class PlayState extends MusicBeatState
 
 		if (!boyfriend.animation.curAnim.name.startsWith("sing"))
 		{
-			boyfriend.playAnim('idle');
+			boyfriend.playAnim('idle' + boyfriend.altAnim);
 		}
 
 
@@ -3485,84 +3498,6 @@ class PlayState extends MusicBeatState
 			dad.playAnim('cheer', true);
 		}
 
-		if (SONG.song == 'Wild')
-		{
-			if(curStep == 1440)
-			{
-				trace("bringing out the guitar");
-
-				new FlxTimer().start(0.5, function(tmr:FlxTimer)
-				{
-					// magik
-					boyfriend.visible = false;
-
-					// remove
-					remove(boyfriend);
-
-					bfGuitarTrans.x += -250;
-					bfGuitarTrans.y += -270;
-
-					// transition bf
-					add(bfGuitarTrans);
-					bfGuitarTrans.visible = true;
-					bfGuitarTrans.animation.play('get guitar');
-
-					new FlxTimer().start(0.2, function(tmr:FlxTimer){
-						// magic ze trans anim
-						bfGuitarTrans.visible = false;
-
-						// make a new boifren
-						boyfriend = new Boyfriend(753.25, 328.05, 'bf-guitar');
-
-						// add bf (DUh)
-						add(boyfriend);
-
-						// reverse magik
-						boyfriend.visible = true;
-					});
-				});
-			}
-			
-			if(curStep == 1705)
-			{
-				trace("bringing out the mic");
-
-				new FlxTimer().start(1.0, function(tmr:FlxTimer){
-	
-					//magik again
-					boyfriend.visible = false;
-	
-					// remove again
-					remove(boyfriend);
-	
-					//make transition animation visible again
-					bfGuitarTrans.visible = true;
-	
-					//play animation
-					bfGuitarTrans.animation.play('get mic');
-	
-					new FlxTimer().start(2.3, function(tmr:FlxTimer){
-	
-						bfGuitarTrans.visible = false;
-		
-						// officially remove
-						remove(bfGuitarTrans);
-		
-						// boifren bak to norm
-						boyfriend = new Boyfriend(753.25, 328.05, 'bf');
-		
-						// add bf again
-						add(boyfriend);
-		
-						// reverse magik
-						boyfriend.visible = true;
-	
-					});
-				});
-			}
-
-			
-		}
 
 		switch (curStage)
 		{
