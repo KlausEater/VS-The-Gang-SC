@@ -488,7 +488,7 @@ class PlayState extends MusicBeatState
 				camPos.x += 400;
 			case 'tom':
 				dad.x = 55.25;
-				dad.y = 44.9;
+				dad.y = 150;
 				camPos.set(dad.getGraphicMidpoint().x + 300, dad.getGraphicMidpoint().y);
 		}
 
@@ -960,7 +960,7 @@ class PlayState extends MusicBeatState
 			gf.dance();
 			if (!frozen)
 			{
-				boyfriend.playAnim('idle' + boyfriend.altAnim);
+				boyfriend.playAnim('idle'+boyfriend.altAnim);
 				if (_modifiers.FrightSwitch)
 				{
 					if (_modifiers.Fright >= 50 && _modifiers.Fright < 100)
@@ -2226,13 +2226,13 @@ class PlayState extends MusicBeatState
 							switch (daNote.noteData)
 							{
 								case 0:
-									boyfriend.playAnim('singLEFTmiss' + boyfriend.altAnim, true);
+									boyfriend.playAnim('singLEFTmiss' +boyfriend.altAnim, true);
 								case 1:
-									boyfriend.playAnim('singDOWNmiss' + boyfriend.altAnim, true);
+									boyfriend.playAnim('singDOWNmiss' +boyfriend.altAnim, true);
 								case 2:
-									boyfriend.playAnim('singUPmiss' + boyfriend.altAnim, true);
+									boyfriend.playAnim('singUPmiss' +boyfriend.altAnim, true);
 								case 3:
-									boyfriend.playAnim('singRIGHTmiss' + boyfriend.altAnim, true);
+									boyfriend.playAnim('singRIGHTmiss' +boyfriend.altAnim, true);
 							}
 							if (_variables.muteMiss)
 								vocals.volume = 0;
@@ -3020,7 +3020,7 @@ class PlayState extends MusicBeatState
 			{
 				if (!frozen)
 				{
-					boyfriend.playAnim('idle' + boyfriend.altAnim);
+					boyfriend.playAnim('idle' +boyfriend.altAnim);
 					if (_modifiers.FrightSwitch)
 					{
 						if (_modifiers.Fright >= 50 && _modifiers.Fright < 100)
@@ -3165,7 +3165,7 @@ class PlayState extends MusicBeatState
 
 	function freezeBF():Void
 	{
-		frozen = true;
+		frozen = true;	
 		missCounter = 0;
 		FlxG.sound.play(Paths.sound('Ice_Appear', 'shared'), _variables.svolume / 100);
 		boyfriend.playAnim('frozen', true);
@@ -3263,13 +3263,13 @@ class PlayState extends MusicBeatState
 			switch (note.noteData)
 			{
 				case 0:
-					boyfriend.playAnim('singLEFT' + boyfriend.altAnim, true);
+					boyfriend.playAnim('singLEFT' +boyfriend.altAnim, true);
 				case 1:
-					boyfriend.playAnim('singDOWN' + boyfriend.altAnim, true);
+					boyfriend.playAnim('singDOWN' +boyfriend.altAnim, true);
 				case 2:
-					boyfriend.playAnim('singUP' + boyfriend.altAnim, true);
+					boyfriend.playAnim('singUP' +boyfriend.altAnim, true);
 				case 3:
-					boyfriend.playAnim('singRIGHT' + boyfriend.altAnim, true);
+					boyfriend.playAnim('singRIGHT' +boyfriend.altAnim, true);
 			}
 
 			playerStrums.forEach(function(spr:FlxSprite)
@@ -3397,12 +3397,21 @@ class PlayState extends MusicBeatState
 		{
 			switch(curStep)
 			{
-				case 1456:
-					boyfriend.altAnim = "-alt";
-					break;
-				case 1744:
-					boyfriend.altAnim = "";
-					break;
+				case 1440:
+					boyfriend.playAnim('guitarTrans', true);
+
+					new FlxTimer().start(2.6, function(tmr:FlxTimer){
+						boyfriend.altAnim = "-alt";
+					});
+
+				case 1705:
+					new FlxTimer().start(1, function(tmr:FlxTimer){
+						boyfriend.playAnim('micTrans', true);
+
+						new FlxTimer().start(2.6, function(tmr:FlxTimer){
+							boyfriend.altAnim = "";
+						});
+					});
 			}
 		}
 

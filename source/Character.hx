@@ -89,10 +89,10 @@ class Character extends FlxSprite
 				var tex = Paths.getSparrowAtlas('characters/BOYFRIEND','shared');
 				frames = tex;
 				animation.addByPrefix('idle', 'BF idle dance', 24, false);
-				animation.addByPrefix('singUP', 'BF NOTE UP0', 24, false);
-				animation.addByPrefix('singLEFT', 'BF NOTE LEFT0', 24, false);
-				animation.addByPrefix('singRIGHT', 'BF NOTE RIGHT0', 24, false);
-				animation.addByPrefix('singDOWN', 'BF NOTE DOWN0', 24, false);
+				animation.addByPrefix('singUP', 'BF NOTE UP instance', 24, false);
+				animation.addByPrefix('singLEFT', 'BF NOTE LEFT instance', 24, false);
+				animation.addByPrefix('singRIGHT', 'BF NOTE RIGHT instance', 24, false);
+				animation.addByPrefix('singDOWN', 'BF NOTE DOWN instance', 24, false);
 				animation.addByPrefix('singUPmiss', 'BF NOTE UP MISS', 24, false);
 				animation.addByPrefix('singLEFTmiss', 'BF NOTE LEFT MISS', 24, false);
 				animation.addByPrefix('singRIGHTmiss', 'BF NOTE RIGHT MISS', 24, false);
@@ -127,26 +127,35 @@ class Character extends FlxSprite
 			case 'bf-guitar':
 				var tex = Paths.getSparrowAtlas('characters/bfGuitar','shared');
 				frames = tex;
+
 				animation.addByPrefix('idle', 'BF idle dance', 24, false);
-				animation.addByPrefix('singUP', 'BF NOTE UP0', 24, false);
-				animation.addByPrefix('singLEFT', 'BF NOTE LEFT0', 24, false);
-				animation.addByPrefix('singRIGHT', 'BF NOTE RIGHT0', 24, false);
-				animation.addByPrefix('singDOWN', 'BF NOTE DOWN0', 24, false);
+				animation.addByPrefix('idle-alt', 'bf alt idle instance', 24, false);
+
+				animation.addByPrefix('singUP', 'BF NOTE UP instance', 24, false);
+				animation.addByPrefix('singLEFT', 'BF NOTE LEFT instance', 24, false);
+				animation.addByPrefix('singRIGHT', 'BF NOTE RIGHT instance', 24, false);
+				animation.addByPrefix('singDOWN', 'BF NOTE DOWN instance', 24, false);
+
+				animation.addByPrefix('singUP-alt', 'bf up alt instance', 24, false);
+				animation.addByPrefix('singLEFT-alt', 'bf left alt instance', 24, false);
+				animation.addByPrefix('singRIGHT-alt', 'bf right alt instance', 24, false);
+				animation.addByPrefix('singDOWN-alt', 'bf down alt instance', 24, false);
+
+
 				animation.addByPrefix('singUPmiss', 'BF NOTE UP MISS', 24, false);
 				animation.addByPrefix('singLEFTmiss', 'BF NOTE LEFT MISS', 24, false);
 				animation.addByPrefix('singRIGHTmiss', 'BF NOTE RIGHT MISS', 24, false);
 				animation.addByPrefix('singDOWNmiss', 'BF NOTE DOWN MISS', 24, false);
-				animation.addByPrefix('hey', 'BF HEY', 24, false);
 
-				animation.addByPrefix('idle-alt', 'BF Guitar idle dance', 24, false);
-				animation.addByPrefix('singUP-alt', 'BF Guitar NOTE SING UP0', 24, false);
-				animation.addByPrefix('singLEFT-alt', 'BF Guitar NOTE SING LEFT0', 24, false);
-				animation.addByPrefix('singRIGHT-alt', 'BF Guitar NOTE SING RIGHT0', 24, false);
-				animation.addByPrefix('singDOWN-alt', 'BF Guitar NOTE SING DOWN0', 24, false);
-				animation.addByPrefix('singUPmiss-alt', 'BF Guitar NOTE SING UP MISS', 24, false);
-				animation.addByPrefix('singLEFTmiss-alt', 'BF Guitar NOTE SING LEFT MISS', 24, false);
-				animation.addByPrefix('singRIGHTmiss-alt', 'BF Guitar NOTE SING RIGHT MISS', 24, false);
-				animation.addByPrefix('singDOWNmiss-alt', 'BF Guitar NOTE SING DOWN MISS', 24, false);
+				animation.addByPrefix('singUPmiss-alt', 'bf alt up miss instance', 24, false);
+				animation.addByPrefix('singLEFTmiss-alt', 'bf alt left miss', 24, false);
+				animation.addByPrefix('singRIGHTmiss-alt', 'bf alt right miss instance', 24, false);
+				animation.addByPrefix('singDOWNmiss-alt', 'bf alt up miss instance', 24, false);
+
+				animation.addByPrefix('guitarTrans', 'bf guitar trans instance', 24, false);
+				animation.addByPrefix('micTrans', 'bf mic trans instance', 24, false);
+
+				animation.addByPrefix('hey', 'BF HEY', 24, false);
 
 				animation.addByPrefix('firstDeath', "BF dies", 24, false);
 				animation.addByPrefix('deathLoop', "BF Dead Loop", 24, true);
@@ -181,19 +190,19 @@ class Character extends FlxSprite
 				flipX = true;
 
 			case 'tom':
-				frames = Paths.getSparrowAtlas('characters/tom_assets', 'shared');
+				frames = Paths.getSparrowAtlas('characters/tom_ass_ets', 'shared');
 
-				animation.addByPrefix('idle', 'Tom idle dance', 24, false);
-				animation.addByPrefix('singUP', 'Tom sing note up', 24, false);
-				animation.addByPrefix('singLEFT', 'Tom sing note left', 24, false);
-				animation.addByPrefix('singRIGHT', 'Tom sing note right', 24, false);
-				animation.addByPrefix('singDOWN', 'Tom sing note down', 24, false);
+				animation.addByPrefix('idle', 'Tom IdleDance instancia', 24, false);
+				animation.addByPrefix('singUP', 'Tom NOTESING up instancia', 24, false);
+				animation.addByPrefix('singLEFT', 'Tom NOTESING left instancia', 24, false);
+				animation.addByPrefix('singRIGHT', 'Tom NOTESING right instancia', 24, false);
+				animation.addByPrefix('singDOWN', 'Tom NOTESING down instancia', 24, false);
 
 				addOffset('idle');
-				addOffset("singUP");
-				addOffset("singRIGHT");
-				addOffset("singLEFT");
-				addOffset("singDOWN", 0, -50);
+				addOffset("singUP", 0, 17);
+				addOffset("singRIGHT", 57, -98);
+				addOffset("singLEFT", 143, -1);
+				addOffset("singDOWN", 30, -119);
 
 				playAnim('idle');
 		}

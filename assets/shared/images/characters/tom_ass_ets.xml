@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="tom_ass_ets.png">
+	<!-- Created with Adobe Animate version 19.2.1.408 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Tom IdleDance instancia 10000" x="0" y="0" width="406" height="630"/>
+	<SubTexture name="Tom IdleDance instancia 10001" x="406" y="0" width="406" height="630"/>
+	<SubTexture name="Tom IdleDance instancia 10002" x="812" y="0" width="406" height="630"/>
+	<SubTexture name="Tom IdleDance instancia 10003" x="1218" y="0" width="406" height="630"/>
+	<SubTexture name="Tom IdleDance instancia 10004" x="1624" y="0" width="406" height="630"/>
+	<SubTexture name="Tom IdleDance instancia 10005" x="2030" y="0" width="406" height="630"/>
+	<SubTexture name="Tom IdleDance instancia 10006" x="2436" y="0" width="406" height="630"/>
+	<SubTexture name="Tom IdleDance instancia 10007" x="2842" y="0" width="406" height="630"/>
+	<SubTexture name="Tom IdleDance instancia 10008" x="3248" y="0" width="406" height="630"/>
+	<SubTexture name="Tom IdleDance instancia 10009" x="3654" y="0" width="406" height="630"/>
+	<SubTexture name="Tom IdleDance instancia 10010" x="4060" y="0" width="406" height="630"/>
+	<SubTexture name="Tom IdleDance instancia 10011" x="4466" y="0" width="406" height="630"/>
+	<SubTexture name="Tom IdleDance instancia 10012" x="4872" y="0" width="406" height="630"/>
+	<SubTexture name="Tom IdleDance instancia 10013" x="4060" y="0" width="406" height="630"/>
+	<SubTexture name="Tom IdleDance instancia 10014" x="5278" y="0" width="406" height="630"/>
+	<SubTexture name="Tom NOTESING down instancia 10000" x="5684" y="0" width="521" height="503"/>
+	<SubTexture name="Tom NOTESING down instancia 10001" x="6205" y="0" width="521" height="503"/>
+	<SubTexture name="Tom NOTESING down instancia 10002" x="6726" y="0" width="521" height="503"/>
+	<SubTexture name="Tom NOTESING down instancia 10003" x="7247" y="0" width="521" height="503"/>
+	<SubTexture name="Tom NOTESING down instancia 10004" x="0" y="630" width="521" height="503"/>
+	<SubTexture name="Tom NOTESING down instancia 10005" x="521" y="630" width="521" height="503"/>
+	<SubTexture name="Tom NOTESING down instancia 10006" x="1042" y="630" width="521" height="503"/>
+	<SubTexture name="Tom NOTESING down instancia 10007" x="1563" y="630" width="521" height="503"/>
+	<SubTexture name="Tom NOTESING down instancia 10008" x="2084" y="630" width="521" height="503"/>
+	<SubTexture name="Tom NOTESING down instancia 10009" x="1042" y="630" width="521" height="503"/>
+	<SubTexture name="Tom NOTESING down instancia 10010" x="2605" y="630" width="521" height="503"/>
+	<SubTexture name="Tom NOTESING down instancia 10011" x="3126" y="630" width="521" height="503"/>
+	<SubTexture name="Tom NOTESING down instancia 10012" x="3647" y="630" width="521" height="503"/>
+	<SubTexture name="Tom NOTESING down instancia 10013" x="2605" y="630" width="521" height="503"/>
+	<SubTexture name="Tom NOTESING down instancia 10014" x="521" y="630" width="521" height="503"/>
+	<SubTexture name="Tom NOTESING left instancia 10000" x="4168" y="630" width="569" height="631"/>
+	<SubTexture name="Tom NOTESING left instancia 10001" x="4168" y="630" width="569" height="631"/>
+	<SubTexture name="Tom NOTESING left instancia 10002" x="4737" y="630" width="569" height="631"/>
+	<SubTexture name="Tom NOTESING left instancia 10003" x="5306" y="630" width="569" height="631"/>
+	<SubTexture name="Tom NOTESING left instancia 10004" x="5875" y="630" width="569" height="631"/>
+	<SubTexture name="Tom NOTESING left instancia 10005" x="5875" y="630" width="569" height="631"/>
+	<SubTexture name="Tom NOTESING left instancia 10006" x="6444" y="630" width="569" height="631"/>
+	<SubTexture name="Tom NOTESING left instancia 10007" x="6444" y="630" width="569" height="631"/>
+	<SubTexture name="Tom NOTESING left instancia 10008" x="5875" y="630" width="569" height="631"/>
+	<SubTexture name="Tom NOTESING left instancia 10009" x="5875" y="630" width="569" height="631"/>
+	<SubTexture name="Tom NOTESING left instancia 10010" x="6444" y="630" width="569" height="631"/>
+	<SubTexture name="Tom NOTESING left instancia 10011" x="6444" y="630" width="569" height="631"/>
+	<SubTexture name="Tom NOTESING left instancia 10012" x="5875" y="630" width="569" height="631"/>
+	<SubTexture name="Tom NOTESING left instancia 10013" x="5875" y="630" width="569" height="631"/>
+	<SubTexture name="Tom NOTESING left instancia 10014" x="6444" y="630" width="569" height="631"/>
+	<SubTexture name="Tom NOTESING right instancia 10000" x="7013" y="630" width="572" height="527"/>
+	<SubTexture name="Tom NOTESING right instancia 10001" x="7585" y="630" width="572" height="527"/>
+	<SubTexture name="Tom NOTESING right instancia 10002" x="0" y="1261" width="572" height="527"/>
+	<SubTexture name="Tom NOTESING right instancia 10003" x="572" y="1261" width="572" height="527"/>
+	<SubTexture name="Tom NOTESING right instancia 10004" x="1144" y="1261" width="572" height="527"/>
+	<SubTexture name="Tom NOTESING right instancia 10005" x="1716" y="1261" width="572" height="527"/>
+	<SubTexture name="Tom NOTESING right instancia 10006" x="1716" y="1261" width="572" height="527"/>
+	<SubTexture name="Tom NOTESING right instancia 10007" x="2288" y="1261" width="572" height="527"/>
+	<SubTexture name="Tom NOTESING right instancia 10008" x="2860" y="1261" width="572" height="527"/>
+	<SubTexture name="Tom NOTESING right instancia 10009" x="1716" y="1261" width="572" height="527"/>
+	<SubTexture name="Tom NOTESING right instancia 10010" x="1716" y="1261" width="572" height="527"/>
+	<SubTexture name="Tom NOTESING right instancia 10011" x="2288" y="1261" width="572" height="527"/>
+	<SubTexture name="Tom NOTESING right instancia 10012" x="2860" y="1261" width="572" height="527"/>
+	<SubTexture name="Tom NOTESING right instancia 10013" x="1716" y="1261" width="572" height="527"/>
+	<SubTexture name="Tom NOTESING right instancia 10014" x="1716" y="1261" width="572" height="527"/>
+	<SubTexture name="Tom NOTESING up instancia 10000" x="3432" y="1261" width="392" height="647"/>
+	<SubTexture name="Tom NOTESING up instancia 10001" x="3824" y="1261" width="392" height="647"/>
+	<SubTexture name="Tom NOTESING up instancia 10002" x="4216" y="1261" width="392" height="647"/>
+	<SubTexture name="Tom NOTESING up instancia 10003" x="4216" y="1261" width="392" height="647"/>
+	<SubTexture name="Tom NOTESING up instancia 10004" x="4608" y="1261" width="392" height="647"/>
+	<SubTexture name="Tom NOTESING up instancia 10005" x="5000" y="1261" width="392" height="647"/>
+	<SubTexture name="Tom NOTESING up instancia 10006" x="5000" y="1261" width="392" height="647"/>
+	<SubTexture name="Tom NOTESING up instancia 10007" x="5000" y="1261" width="392" height="647"/>
+	<SubTexture name="Tom NOTESING up instancia 10008" x="5000" y="1261" width="392" height="647"/>
+	<SubTexture name="Tom NOTESING up instancia 10009" x="5000" y="1261" width="392" height="647"/>
+	<SubTexture name="Tom NOTESING up instancia 10010" x="5000" y="1261" width="392" height="647"/>
+	<SubTexture name="Tom NOTESING up instancia 10011" x="5000" y="1261" width="392" height="647"/>
+	<SubTexture name="Tom NOTESING up instancia 10012" x="5000" y="1261" width="392" height="647"/>
+	<SubTexture name="Tom NOTESING up instancia 10013" x="5000" y="1261" width="392" height="647"/>
+	<SubTexture name="Tom NOTESING up instancia 10014" x="5000" y="1261" width="392" height="647"/>
+</TextureAtlas>

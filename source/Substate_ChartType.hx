@@ -41,7 +41,7 @@ class Substate_ChartType extends MusicBeatSubstate
 
     var curWeek:Int = 0;
 
-    public function new(_curWeek:Int = 0)
+    public function new(_curWeek:Int = 0, _curSong:String = "")
     {
         super();
 
@@ -88,8 +88,6 @@ class Substate_ChartType extends MusicBeatSubstate
 		add(camFollow);
 
         curWeek = _curWeek;
-
-        trace(curWeek);
 
         new FlxTimer().start(0.1, function(tmr:FlxTimer)
 			{
