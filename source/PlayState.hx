@@ -3397,20 +3397,18 @@ class PlayState extends MusicBeatState
 		{
 			switch(curStep)
 			{
-				case 1440:
+				case 1437:
 					boyfriend.playAnim('guitarTrans', true);
 
 					new FlxTimer().start(2.5, function(tmr:FlxTimer){
 						boyfriend.altAnim = "-alt";
 					});
 
-				case 1705:
-					new FlxTimer().start(1, function(tmr:FlxTimer){
-						boyfriend.playAnim('micTrans', true);
-
-						new FlxTimer().start(2.5, function(tmr:FlxTimer){
-							boyfriend.altAnim = "";
-						});
+				case 1716:
+					boyfriend.playAnim('micTrans', true);
+						
+					new FlxTimer().start(2.5, function(tmr:FlxTimer){
+						boyfriend.altAnim = "";
 					});
 			}
 		}
@@ -3504,7 +3502,7 @@ class PlayState extends MusicBeatState
 		if (curBeat % 16 == 15 && SONG.song == 'Tutorial' && dad.curCharacter == 'gf' && curBeat > 16 && curBeat < 48)
 		{
 			boyfriend.playAnim('hey', true);
-			dad.playAnim('cheer', true);
+			dad.playAnim('cheer', true);																																				
 		}
 
 
