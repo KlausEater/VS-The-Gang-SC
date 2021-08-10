@@ -3400,7 +3400,7 @@ class PlayState extends MusicBeatState
 				case 1440:
 					boyfriend.playAnim('guitarTrans', true);
 
-					new FlxTimer().start(2.6, function(tmr:FlxTimer){
+					new FlxTimer().start(2.5, function(tmr:FlxTimer){
 						boyfriend.altAnim = "-alt";
 					});
 
@@ -3408,7 +3408,7 @@ class PlayState extends MusicBeatState
 					new FlxTimer().start(1, function(tmr:FlxTimer){
 						boyfriend.playAnim('micTrans', true);
 
-						new FlxTimer().start(2.6, function(tmr:FlxTimer){
+						new FlxTimer().start(2.5, function(tmr:FlxTimer){
 							boyfriend.altAnim = "";
 						});
 					});
