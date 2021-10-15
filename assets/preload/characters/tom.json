@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				143, 
+                -1
+			],
+			"loop": false,
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "Tom NOTESING left instancia",
+			"indices": []
+		},
+		{
+			"offsets": [
+				30,
+                 -119
+			],
+			"loop": false,
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "Tom NOTESING down instancia",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				17
+			],
+			"loop": false,
+			"anim": "singUP",
+			"fps": 24,
+			"name": "Tom NOTESING up instancia",
+			"indices": []
+		},
+		{
+			"offsets": [
+				57, 
+                -98
+			],
+			"loop": false,
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "Tom NOTESING right instancia",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"anim": "idle",
+			"fps": 24,
+			"name": "Tom IdleDance instancia",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/tom_ass_ets",
+	"position": [
+		0,
+        0
+	],
+	"healthicon": "face",
+	"flip_x": false,
+	"healthbar_colors": [
+		84,
+		188,
+		240
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

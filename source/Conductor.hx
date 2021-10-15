@@ -1,7 +1,6 @@
 package;
 
 import Song.SwagSong;
-import ModifierVariables._modifiers;
 
 /**
  * ...
@@ -26,7 +25,6 @@ class Conductor
 
 	public static var safeFrames:Int = 10;
 	public static var safeZoneOffset:Float = (safeFrames / 60) * 1000; // is calculated in create(), is safeFrames in milliseconds
-	public static var timeScale:Float = Conductor.safeZoneOffset / 166;
 
 	public static var bpmChangeMap:Array<BPMChangeEvent> = [];
 
@@ -39,7 +37,6 @@ class Conductor
 		bpmChangeMap = [];
 
 		var curBPM:Float = song.bpm;
-
 		var totalSteps:Int = 0;
 		var totalPos:Float = 0;
 		for (i in 0...song.notes.length)
