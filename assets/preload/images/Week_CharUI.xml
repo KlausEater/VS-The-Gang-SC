@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Week_CharUI.png">
+	<!-- Created with Adobe Animate version 19.2.1.408 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="teatro lineart0000" x="1340" y="0" width="522" height="574"/>
+	<SubTexture name="teatro lineart0001" x="1340" y="0" width="522" height="574"/>
+	<SubTexture name="teatro lineart0002" x="0" y="584" width="522" height="574"/>
+	<SubTexture name="teatro lineart0003" x="522" y="584" width="522" height="574"/>
+	<SubTexture name="teatro lineart0004" x="522" y="584" width="522" height="574"/>
+	<SubTexture name="teatro lineart0005" x="1044" y="584" width="522" height="574"/>
+	<SubTexture name="teatro lineart0006" x="1044" y="584" width="522" height="574"/>
+	<SubTexture name="teatro lineart0007" x="0" y="1158" width="522" height="574"/>
+	<SubTexture name="teatro lineart0008" x="0" y="1158" width="522" height="574"/>
+	<SubTexture name="teatro lineart0009" x="0" y="1158" width="522" height="574"/>
+	<SubTexture name="teatro lineart0010" x="0" y="1158" width="522" height="574"/>
+	<SubTexture name="teatro lineart0011" x="0" y="1158" width="522" height="574"/>
+	<SubTexture name="teatro lineart0012" x="0" y="1158" width="522" height="574"/>
+	<SubTexture name="teatro lineart0013" x="0" y="1158" width="522" height="574"/>
+	<SubTexture name="teatro lineart0014" x="0" y="1158" width="522" height="574"/>
+	<SubTexture name="tom0000" x="0" y="0" width="268" height="584"/>
+	<SubTexture name="tom0001" x="0" y="0" width="268" height="584"/>
+	<SubTexture name="tom0002" x="268" y="0" width="268" height="584"/>
+	<SubTexture name="tom0003" x="268" y="0" width="268" height="584"/>
+	<SubTexture name="tom0004" x="536" y="0" width="268" height="584"/>
+	<SubTexture name="tom0005" x="536" y="0" width="268" height="584"/>
+	<SubTexture name="tom0006" x="804" y="0" width="268" height="584"/>
+	<SubTexture name="tom0007" x="804" y="0" width="268" height="584"/>
+	<SubTexture name="tom0008" x="1072" y="0" width="268" height="584"/>
+	<SubTexture name="tom0009" x="1072" y="0" width="268" height="584"/>
+	<SubTexture name="tom0010" x="1072" y="0" width="268" height="584"/>
+	<SubTexture name="tom0011" x="1072" y="0" width="268" height="584"/>
+	<SubTexture name="tom0012" x="1072" y="0" width="268" height="584"/>
+	<SubTexture name="tom0013" x="1072" y="0" width="268" height="584"/>
+	<SubTexture name="tom0014" x="1072" y="0" width="268" height="584"/>
+	<SubTexture name="tom0015" x="0" y="0" width="268" height="584"/>
+</TextureAtlas>

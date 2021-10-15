@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="mic.png">
+	<!-- Created with Adobe Animate version 19.2.1.408 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="mic in the floor0000" x="0" y="0" width="177" height="91"/>
+	<SubTexture name="mic in the floor0001" x="0" y="0" width="177" height="91"/>
+	<SubTexture name="mic in the floor0002" x="0" y="0" width="177" height="91"/>
+	<SubTexture name="mic in the floor0003" x="0" y="0" width="177" height="91"/>
+	<SubTexture name="mic in the floor0004" x="0" y="0" width="177" height="91"/>
+	<SubTexture name="mic in the floor0005" x="0" y="0" width="177" height="91"/>
+	<SubTexture name="mic in the floor0006" x="0" y="0" width="177" height="91"/>
+	<SubTexture name="mic in the floor0007" x="0" y="0" width="177" height="91"/>
+	<SubTexture name="mic in the floor0008" x="0" y="0" width="177" height="91"/>
+	<SubTexture name="mic in the floor0009" x="0" y="0" width="177" height="91"/>
+	<SubTexture name="mic in the floor0010" x="0" y="0" width="177" height="91"/>
+	<SubTexture name="mic in the floor0011" x="0" y="0" width="177" height="91"/>
+	<SubTexture name="trowing mic0000" x="177" y="0" width="350" height="619"/>
+	<SubTexture name="trowing mic0001" x="527" y="0" width="350" height="619"/>
+	<SubTexture name="trowing mic0002" x="877" y="0" width="350" height="619"/>
+	<SubTexture name="trowing mic0003" x="1227" y="0" width="350" height="619"/>
+	<SubTexture name="trowing mic0004" x="1577" y="0" width="350" height="619"/>
+	<SubTexture name="trowing mic0005" x="1927" y="0" width="350" height="619"/>
+	<SubTexture name="trowing mic0006" x="2277" y="0" width="350" height="619"/>
+	<SubTexture name="trowing mic0007" x="2627" y="0" width="350" height="619"/>
+	<SubTexture name="trowing mic0008" x="2977" y="0" width="350" height="619"/>
+	<SubTexture name="trowing mic0009" x="3327" y="0" width="350" height="619"/>
+	<SubTexture name="trowing mic0010" x="3677" y="0" width="350" height="619"/>
+	<SubTexture name="trowing mic0011" x="0" y="619" width="350" height="619"/>
+	<SubTexture name="trowing mic0012" x="350" y="619" width="350" height="619"/>
+	<SubTexture name="trowing mic0013" x="350" y="619" width="350" height="619"/>
+	<SubTexture name="trowing mic0014" x="350" y="619" width="350" height="619"/>
+	<SubTexture name="trowing mic0015" x="350" y="619" width="350" height="619"/>
+	<SubTexture name="trowing mic0016" x="350" y="619" width="350" height="619"/>
+	<SubTexture name="trowing mic0017" x="350" y="619" width="350" height="619"/>
+	<SubTexture name="trowing mic0018" x="350" y="619" width="350" height="619"/>
+	<SubTexture name="trowing mic0019" x="350" y="619" width="350" height="619"/>
+	<SubTexture name="trowing mic0020" x="350" y="619" width="350" height="619"/>
+	<SubTexture name="trowing mic0021" x="350" y="619" width="350" height="619"/>
+	<SubTexture name="trowing mic0022" x="350" y="619" width="350" height="619"/>
+	<SubTexture name="trowing mic0023" x="350" y="619" width="350" height="619"/>
+</TextureAtlas>
