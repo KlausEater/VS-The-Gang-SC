@@ -11,7 +11,7 @@ class DiscordClient
 	{
 		trace("Discord Client starting...");
 		DiscordRpc.start({
-			clientID: "845563327022235698",
+			clientID: "863222024192262205",
 			onReady: onReady,
 			onError: onError,
 			onDisconnected: onDisconnected
@@ -27,14 +27,19 @@ class DiscordClient
 
 		DiscordRpc.shutdown();
 	}
-
+	
+	public static function shutdown()
+	{
+		DiscordRpc.shutdown();
+	}
+	
 	static function onReady()
 	{
 		DiscordRpc.presence({
-			details: "Booting up",
+			details: "In the Menus",
 			state: null,
 			largeImageKey: 'icon',
-			largeImageText: "FNF: Vs The Gang"
+			largeImageText: "Psych Engine"
 		});
 	}
 
@@ -57,11 +62,6 @@ class DiscordClient
 		trace("Discord Client initialized");
 	}
 
-	public static function shutdown()
-		{
-			DiscordRpc.shutdown();
-		}
-
 	public static function changePresence(details:String, state:Null<String>, ?smallImageKey : String, ?hasStartTimestamp : Bool, ?endTimestamp: Float)
 	{
 		var startTimestamp:Float = if(hasStartTimestamp) Date.now().getTime() else 0;
@@ -75,7 +75,7 @@ class DiscordClient
 			details: details,
 			state: state,
 			largeImageKey: 'icon',
-			largeImageText: "FNF: Vs The Gang",
+			largeImageText: "Engine Version: " + MainMenuState.psychEngineVersion,
 			smallImageKey : smallImageKey,
 			// Obtained times are in milliseconds so they are divided so Discord can use it
 			startTimestamp : Std.int(startTimestamp / 1000),

@@ -1,5 +1,6 @@
 package;
 
+//import js.lib.intl.DateTimeFormat.WeekdayRepresentation;
 import lime.app.Promise;
 import lime.app.Future;
 import flixel.FlxG;
@@ -7,6 +8,7 @@ import flixel.FlxState;
 import flixel.FlxSprite;
 import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.util.FlxTimer;
+import flixel.math.FlxMath;
 
 import openfl.utils.Assets;
 import lime.utils.Assets as LimeAssets;
@@ -18,35 +20,45 @@ import haxe.io.Path;
 class LoadingState extends MusicBeatState
 {
 	inline static var MIN_TIME = 1.0;
+
+	// Browsers will load create(), you can make your song load a custom directory there
+	// If you're compiling to desktop (or something that doesn't use NO_PRELOAD_ALL), search for getNextState instead
+	// I'd recommend doing it on both actually lol
+	
+	// TO DO: Make this easier
 	
 	var target:FlxState;
 	var stopMusic = false;
+	var directory:String;
 	var callbacks:MultiCallback;
-	
-	var logo:FlxSprite;
-	var gfDance:FlxSprite;
-	var danceLeft = false;
-	
-	function new(target:FlxState, stopMusic:Bool)
+	var targetShit:Float = 0;
+
+	function new(target:FlxState, stopMusic:Bool, directory:String)
 	{
 		super();
 		this.target = target;
 		this.stopMusic = stopMusic;
+		this.directory = directory;
 	}
-	
+
+	var funkay:FlxSprite;
+	var loadBar:FlxSprite;
 	override function create()
 	{
-		logo = new FlxSprite(120, -30);
-		logo.frames = Paths.getSparrowAtlas('logoBumpin');
-		logo.antialiasing = true;
-		logo.animation.addByPrefix('bump', 'logo bumpin', 24);
-		logo.animation.play('bump');
-		logo.scale.set(0.6,0.6);
-		logo.updateHitbox();
-		// logoBl.screenCenter();
-		// logoBl.color = FlxColor.BLACK;
+		var bg:FlxSprite = new FlxSprite(0, 0).makeGraphic(FlxG.width, FlxG.height, 0xffcaff4d);
+		add(bg);
+		funkay = new FlxSprite(0, 0).loadGraphic(Paths.getPath('images/funkay.png', IMAGE));
+		funkay.setGraphicSize(0, FlxG.height);
+		funkay.updateHitbox();
+		funkay.antialiasing = ClientPrefs.globalAntialiasing;
+		add(funkay);
+		funkay.scrollFactor.set();
+		funkay.screenCenter();
 
-		add(logo);
+		loadBar = new FlxSprite(0, FlxG.height - 20).makeGraphic(FlxG.width, 10, 0xffff16d2);
+		loadBar.screenCenter(X);
+		loadBar.antialiasing = ClientPrefs.globalAntialiasing;
+		add(loadBar);
 		
 		initSongsManifest().onComplete
 		(
@@ -54,15 +66,20 @@ class LoadingState extends MusicBeatState
 			{
 				callbacks = new MultiCallback(onLoad);
 				var introComplete = callbacks.add("introComplete");
-				checkLoadSong(getSongPath());
-				if (PlayState.SONG.needsVoices)
-					checkLoadSong(getVocalPath());
+				if (PlayState.SONG != null) {
+					checkLoadSong(getSongPath());
+					if (PlayState.SONG.needsVoices)
+						checkLoadSong(getVocalPath());
+				}
 				checkLibrary("shared");
-				if (PlayState.storyWeek > 0)
-					checkLibrary("week" + PlayState.storyWeek);
-				else
-					checkLibrary("tutorial");
-				
+				if(directory != null && directory.length > 0 && directory != 'shared') {
+					checkLibrary(directory);
+				}
+				else if(PlayState.storyWeek == 7)
+				{
+					checkLibrary("week7");
+				}
+
 				var fadeTime = 0.5;
 				FlxG.camera.fade(FlxG.camera.bgColor, fadeTime, true);
 				new FlxTimer().start(fadeTime + MIN_TIME, function(_) introComplete());
@@ -85,40 +102,34 @@ class LoadingState extends MusicBeatState
 		}
 	}
 	
-	function checkLibrary(library:String)
-	{
+	function checkLibrary(library:String) {
 		trace(Assets.hasLibrary(library));
 		if (Assets.getLibrary(library) == null)
 		{
 			@:privateAccess
 			if (!LimeAssets.libraryPaths.exists(library))
 				throw "Missing library: " + library;
-			
+
 			var callback = callbacks.add("library:" + library);
 			Assets.loadLibrary(library).onComplete(function (_) { callback(); });
 		}
 	}
 	
-	override function beatHit()
-	{
-		super.beatHit();
-		
-		logo.animation.play('bump');
-		danceLeft = !danceLeft;
-		
-		if (danceLeft)
-			gfDance.animation.play('danceRight');
-		else
-			gfDance.animation.play('danceLeft');
-	}
-	
 	override function update(elapsed:Float)
 	{
 		super.update(elapsed);
-		#if debug
-		if (FlxG.keys.justPressed.SPACE)
-			trace('fired: ' + callbacks.getFired() + " unfired:" + callbacks.getUnfired());
-		#end
+		funkay.setGraphicSize(Std.int(0.88 * FlxG.width + 0.9 * (funkay.width - 0.88 * FlxG.width)));
+		funkay.updateHitbox();
+		if(controls.ACCEPT)
+		{
+			funkay.setGraphicSize(Std.int(funkay.width + 60));
+			funkay.updateHitbox();
+		}
+
+		if(callbacks != null) {
+			targetShit = FlxMath.remapToRange(callbacks.numRemaining / callbacks.length, 1, 0, 0, 1);
+			loadBar.scale.x += 0.5 * (targetShit - loadBar.scale.x);
+		}
 	}
 	
 	function onLoad()
@@ -126,7 +137,7 @@ class LoadingState extends MusicBeatState
 		if (stopMusic && FlxG.sound.music != null)
 			FlxG.sound.music.stop();
 		
-		FlxG.switchState(target);
+		MusicBeatState.switchState(target);
 	}
 	
 	static function getSongPath()
@@ -141,19 +152,29 @@ class LoadingState extends MusicBeatState
 	
 	inline static public function loadAndSwitchState(target:FlxState, stopMusic = false)
 	{
-		FlxG.switchState(getNextState(target, stopMusic));
+		MusicBeatState.switchState(getNextState(target, stopMusic));
 	}
 	
 	static function getNextState(target:FlxState, stopMusic = false):FlxState
 	{
-		Paths.setCurrentLevel("week" + PlayState.storyWeek);
+		var directory:String = 'shared';
+		var weekDir:String = StageData.forceNextDirectory;
+		StageData.forceNextDirectory = null;
+
+		if(weekDir != null && weekDir.length > 0 && weekDir != '') directory = weekDir;
+		else if(PlayState.storyWeek == 7) directory = 'week7';
+
+		Paths.setCurrentLevel(directory);
+		trace('Setting asset folder to ' + directory);
+
 		#if NO_PRELOAD_ALL
-		var loaded = isSoundLoaded(getSongPath())
-			&& (!PlayState.SONG.needsVoices || isSoundLoaded(getVocalPath()))
-			&& isLibraryLoaded("shared");
+		var loaded:Bool = false;
+		if (PlayState.SONG != null) {
+			loaded = isSoundLoaded(getSongPath()) && (!PlayState.SONG.needsVoices || isSoundLoaded(getVocalPath())) && isLibraryLoaded("shared") && isLibraryLoaded(directory);
+		}
 		
 		if (!loaded)
-			return new LoadingState(target, stopMusic);
+			return new LoadingState(target, stopMusic, directory);
 		#end
 		if (stopMusic && FlxG.sound.music != null)
 			FlxG.sound.music.stop();
